@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "2023_java_team_mo"
