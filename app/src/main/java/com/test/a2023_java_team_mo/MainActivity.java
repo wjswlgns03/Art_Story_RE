@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 // test 2
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Frag2 frag2;
     private Frag3 frag3;
     private Frag4 frag4;
+    private Frag_Login_btn frag5;
 
 
     @Override
@@ -43,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_profile:
                         setFrag(3);
                         break;
+                    case R.id.editProfileButton:
+                        setFrag(4);
+                        break;
                 }
                 return true;
             }
@@ -52,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         frag2 = new Frag2();
         frag3 = new Frag3();
         frag4 = new Frag4();
-
+        frag5 = new Frag_Login_btn();
         setFrag(0); // 첫 프래그먼트 화면을 무엇으로 지정해줄 것인지 선택.
     }
 
@@ -74,10 +81,27 @@ public class MainActivity extends AppCompatActivity {
                 ft.commit();
                 break;
             case 3:
-                ft.replace(R.id.main_frame, frag4);
-                ft.commit();
-                break;
-
+                if (isUserLoggedIn()) {
+                    // 사용자가 로그인한 경우
+                    // ProfileFragment로 이동
+                    ft.replace(R.id.main_frame, frag4);
+                    ft.commit();
+                    break;
+                } else {
+                    // 사용자가 로그인하지 않은 경우
+                    // LoginFragment로 이동
+                    ft.replace(R.id.main_frame, frag5);
+                    ft.commit();
+                    break;
+                }
         }
     }
+
+    private boolean isUserLoggedIn() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        return currentUser != null;
+    }
 }
+
+

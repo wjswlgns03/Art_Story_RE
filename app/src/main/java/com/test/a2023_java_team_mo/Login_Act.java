@@ -1,8 +1,11 @@
 package com.test.a2023_java_team_mo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,5 +33,16 @@ public class Login_Act extends AppCompatActivity {
         mEtPwd = findViewById(R.id.et_pw);
         mBtnRegister = findViewById(R.id.RegisterButton);
         mBtnLogin = findViewById(R.id.loginButton);
+
+        TextView registerTextView = findViewById(R.id.registerTextView);
+        registerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Register_Act 호출
+                Intent intent = new Intent(getApplicationContext(), Register_Act.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

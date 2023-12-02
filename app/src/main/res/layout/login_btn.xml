@@ -58,23 +58,6 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/no_login_btn"
-        android:layout_width="282dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="118dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="@font/gmarketsans"
-        android:text="이메일 없이 시작하기"
-        android:textColor="#000000"
-        tools:ignore="NotSibling,UnknownId" />
-
-    <Button
         android:id="@+id/em_login_btn"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
@@ -82,7 +65,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="63dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="65dp"
         android:layout_marginBottom="46dp"
         android:backgroundTint="#FFFFFF"

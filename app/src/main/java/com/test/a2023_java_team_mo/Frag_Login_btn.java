@@ -1,5 +1,6 @@
 package com.test.a2023_java_team_mo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,9 @@ public class Frag_Login_btn extends Fragment {
         emLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 클릭하면 login_input_screen.xml로 이동할 수 있게 만들어야 함
+                // 클릭하면 login_input_screen.xml로 이동
+                Intent intent = new Intent(getActivity(), Login_Act.class);
+                startActivity(intent);
             }
         });
 
