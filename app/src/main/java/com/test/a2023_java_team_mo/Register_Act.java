@@ -38,7 +38,7 @@ public class Register_Act extends AppCompatActivity {
 
                 mFBAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Register_Act.this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    public void onComplete( Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             FirebaseUser Fbuser = mFBAuth.getCurrentUser();
                             UserAccount UsrAcc = new UserAccount();
