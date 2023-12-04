@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editPostButton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+
+    <!-- Content Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Image Preview -->
+
+        <!-- Add Image Button -->
+
+        <TextView
+            android:id="@+id/introduce2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_alignBottom="@+id/art_story"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/gmarketsans"
+            android:gravity="center"
+            android:text="작품을 공유해주세요"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+
+        <!-- 이미지 렌더링 문제 발생-->
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/sample_img" />
+
+        <ImageButton
+            android:id="@+id/btn_add_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/image_preview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/plus" />
+
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add_image"
+            android:layout_marginTop="18dp"
+            android:hint="작품 제목" />
+
+
+        <EditText
+            android:id="@+id/et_plain_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_title"
+            android:layout_marginTop="18dp"
+            android:hint="작품 설명"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_plain_text"
+            android:layout_marginTop="18dp"
+            android:text="Post" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -10,7 +10,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-// test 2
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView; // 바텀 네비게이션 뷰
@@ -21,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Frag3 frag3;
     private Frag4 frag4;
     private Frag_Login_btn frag5;
+    private Frag_Post frag6;
 
 
     @Override
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_profile:
                         setFrag(3);
                         break;
-                    case R.id.editProfileButton:
+                    case R.id.menu_post:
                         setFrag(4);
                         break;
                 }
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         frag3 = new Frag3();
         frag4 = new Frag4();
         frag5 = new Frag_Login_btn();
+        frag6 = new Frag_Post();
         setFrag(0); // 첫 프래그먼트 화면을 무엇으로 지정해줄 것인지 선택.
     }
 
@@ -76,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 ft.replace(R.id.main_frame, frag3);
+                ft.commit();
+                break;
+            case 4:
+                ft.replace(R.id.main_frame, frag6);
                 ft.commit();
                 break;
             case 3:

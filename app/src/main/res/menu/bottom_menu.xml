@@ -9,6 +9,10 @@
         android:icon="@drawable/tag"
         android:title="Tags" />
     <item
+        android:id="@+id/menu_post"
+        android:icon="@drawable/post_btn"
+        android:title="Post" />
+    <item
         android:id="@+id/menu_search"
         android:icon="@drawable/search"
         android:title="Search" />
@@ -16,4 +20,5 @@
         android:id="@+id/menu_profile"
         android:icon="@drawable/user"
         android:title="Profile" />
+
 </menu>
