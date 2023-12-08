@@ -29,6 +29,7 @@ public class Frag_Login_btn extends Fragment {
         emLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // 클릭하면 login_input_screen.xml로 이동
                 Intent intent = new Intent(getActivity(), Login_Act.class);
                 startActivity(intent);

@@ -16,5 +16,7 @@ public class Frag_Post extends Fragment {
     public View onCreateView( LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag_post, container, false);
         return view;
+
+
     }
 }

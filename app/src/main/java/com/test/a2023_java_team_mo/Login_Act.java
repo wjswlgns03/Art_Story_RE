@@ -28,6 +28,8 @@ public class Login_Act extends AppCompatActivity {
         mFBAuth = FirebaseAuth.getInstance();
         mDBRef = FirebaseDatabase.getInstance().getReference();
 
+
+
         mEtname = findViewById(R.id.etNickname);
         mEtEmail = findViewById(R.id.et_email);
         mEtPwd = findViewById(R.id.et_pw);
